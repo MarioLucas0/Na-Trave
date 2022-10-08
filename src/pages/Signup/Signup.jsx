@@ -1,4 +1,4 @@
-import logo  from '../../assets/img/logo/logo-fundo-branco.svg'
+import logo from '../../../public/img/logo/logo-fundo-branco.svg'
 import { Icon } from '../../components/icon/Icon'
 import { Input } from '../../components/Input/Input'
 import { Link } from 'react-router-dom';

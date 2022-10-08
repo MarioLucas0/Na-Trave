@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import photo from '../../assets/img/imagem/photo.png'
-import logo  from '../../assets/img/logo/logo-fundo-vinho.svg'
+import logo from '../../../public/img/logo/logo-fundo-vinho.svg'
 
 
 function Home() {
@@ -15,7 +14,7 @@ function Home() {
       <div className="container  p-4 h-screen bg-red-700 text-white flex-1 flex flex-col items-center md:flex-row space-y-6 md:space-x-6">
 
         <div className="md:flex-1 flex justify-center">
-            <img src={photo} className="w-full max-w-md" />
+            <img src="/public/img/imagem/photo.png" className="w-full max-w-md" />
         </div>
 
         <div className="md:flez-1 flex flex-col space-y-6">

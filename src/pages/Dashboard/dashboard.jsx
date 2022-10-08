@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
-import logo from '../../assets/img/logo/logo-fundo-vermelho.svg'
+import logo from '../../../public/img/logo/logo-fundo-vermelho.svg'
+import { Card } from '../../components/Card/card'
 import { Icon } from '../../components/icon/Icon'
-import  ban  from './bandeiras/sui.png'
+
 
 export const Dashboard   = () => (
   <div className="">
@@ -24,26 +25,16 @@ export const Dashboard   = () => (
           </div>
         </section>
 
-        <section id="content" className="container max-w-3xl p-4">
+        <section id="content" className="container max-w-3xl p-4 space-y-4">
             
-            <div className="roundend-xl border border-gray-300 p-4 text-center space-y-4">
-                <span className="text-sm md:text-base text-gray-700 font-bold">7:00</span>
-
-                <div className="flex space-x-4 justify-center items-center">
-                  <span className="uppercase">sui</span>
-                  <img src={ban }  />
-
-                  <input  typ="number" className="bg-red-300/[0.2] w-16 h-16 text-red-700 text-xl text-center" />
-
-                  <span className="text-red-500 font-bold">X</span>
-
-                  <input typ="number"  className="bg-red-300/[0.2] w-16 h-16 text-red-700 text-xl text-center"/>
-
-                  <img src={ ban }   />
-                  <span className="uppercase">cam</span>
-                </div>
-              
-            </div>
+           <Card 
+           
+           timeA={{slug: 'sui' }}
+           timeB={{slug: 'cam' }}
+           match={{time: '7:00'}}
+           
+           
+           />
 
 
         </section>
