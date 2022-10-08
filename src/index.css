@@ -5,4 +5,9 @@
 
 body {
   font-family: 'Cairo', sans-serif;
+  @apply text-red-700;
+}
+
+input {
+  outline: 0;
 }
