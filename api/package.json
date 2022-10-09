@@ -1,0 +1,26 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioLucas0/Na-Trave.git"
+  },
+  "author": {
+    "name": "Mario Lucas",
+    "email": "mariolucas.2000@outlook.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarioLucas0/Na-Trave/issues"
+  },
+  "homepage": "https://github.com/MarioLucas0/Na-Trave#readme",
+  "dependencies": {
+    "koa": "^2.13.4"
+  }
+}
