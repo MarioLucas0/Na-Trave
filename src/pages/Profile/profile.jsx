@@ -1,27 +1,13 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../../public/img/logo/logo-fundo-vermelho.svg'
 import { Card } from '../../components/Card/card'
+import { DateSelect } from '../../components/DateSelect/dateselect'
 import { Icon } from '../../components/icon/Icon'
 
 
-const initialDate = '2022-11-20T00:00:00'
 
-const DateSelect = () => {
 
-  const [currentDate, setCurrentDate] = useState(initialDate)
-  
-  return (
 
-      <div className="p-4 flex space-x-4 items-center  justify-center">
-      <Icon name="arrowLeft" className="w-6 text-red-500"></Icon>
-      <span className="font-bold">24 de novembro</span>
-      <Icon name="arrowRight" className="w-6 text-red-500"></Icon>
-      </div>
-
-    )
-
-}
 
 export const Profile   = () => (
 
@@ -48,7 +34,7 @@ export const Profile   = () => (
 
         <section id="content" className="container max-w-3xl p-4">
             
-            <h2 className="text-red-500 text-xl font-bold">Seus Palpites</h2>
+            <h2 className="text-red-500 text-xl font-bold" >Seus Palpites</h2>
 
             <DateSelect />
 
