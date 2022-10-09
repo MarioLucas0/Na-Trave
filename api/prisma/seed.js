@@ -2,6 +2,7 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 
+
 const games =[
   {
     "gameTime": "2022-11-20T16:00:00Z",
