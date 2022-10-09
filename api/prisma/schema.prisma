@@ -16,8 +16,8 @@ datasource db {
 model User {
   id String @id @default(cuid())
   name String
-  email String
-  username String
+  email String @unique
+  username String @unique
   password String
   
   createdAt DateTime @default(now())
@@ -45,8 +45,8 @@ model  Game {
 model Hunch {
 
    id String @id @default(cuid())
-   homeTeam Int
-   awayTeam Int
+   homeTeamScore Int
+   awayTeamScore Int
    userId String 
    gameId String
    
@@ -56,4 +56,6 @@ model Hunch {
   
   createdAt DateTime @default(now())
   updatedAt DateTime  @updatedAt
+
+  @@unique([userId,gameId])
 }

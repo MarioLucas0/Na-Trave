@@ -1,31 +1,74 @@
 {
   
   "name": "api",
+  
   "version": "0.0.0",
+  
   "description": "",
+  
   "main": "serve.js",
+  
   "type": "module",
+  
   "prisma": {
-    "seed": "node prisma/seed.js"
+  
+    
+  "seed": "node prisma/seed.js"
+  
   },
+  
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MarioLucas0/Na-Trave.git"
+  
+    
+  "type": "git",
+  
+    
+  "url": "git+https://github.com/MarioLucas0/Na-Trave.git"
+  
   },
+  
   "author": "Mario Lucas",
+  
   "license": "ISC",
+  
   "bugs": {
-    "url": "https://github.com/MarioLucas0/Na-Trave/issues"
+  
+    
+  "url": "https://github.com/MarioLucas0/Na-Trave/issues"
+  
   },
+  
   "homepage": "https://github.com/MarioLucas0/Na-Trave#readme",
+  
   "dependencies": {
-    "@koa/cors": "^3.4.1",
-    "@koa/router": "^12.0.0",
-    "@prisma/client": "^4.4.0",
-    "koa": "^2.13.4",
-    "koa-bodyparser": "^4.3.0"
+  
+    
+  "@koa/cors": "^3.4.1",
+  
+    
+  "@koa/router": "^12.0.0",
+  
+    
+  "@prisma/client": "^4.4.0",
+  
+    
+  "bcrypt": "^5.1.0",
+  
+    
+  "date-fns": "^2.29.3",
+  
+    
+  "koa": "^2.13.4",
+  
+    
+  "koa-bodyparser": "^4.3.0"
+  
   },
+  
   "devDependencies": {
-    "prisma": "^4.4.0"
+  
+    
+  "prisma": "^4.4.0"
+  
   }
 }
