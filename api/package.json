@@ -9,7 +9,9 @@
   "main": "serve.js",
   
   "type": "module",
-  
+  "script": {
+    "start":  "node -r dotenv-safe/config serve.js"
+  },
   "prisma": {
   
     
@@ -56,6 +58,12 @@
   
     
   "date-fns": "^2.29.3",
+  
+    
+  "dotenv-safe": "^8.2.0",
+  
+    
+  "jsonwebtoken": "^8.5.1",
   
     
   "koa": "^2.13.4",
