@@ -1,17 +1,15 @@
-import Koa from 'koa';
-import { router} from './router.js'
-import bodyParser  from 'koa-bodyparser';
-import cors from '@koa/cors';
+//consumer service KOA / HTTP
+import koa  from 'koa'
+import bodyParser from 'koa-bodyparser'
+import cors from '@koa/cors'
 
-export const app = new Koa();
+import { router } from './router.js'
 
+export const app = new koa()
 
-
-app.use(cors());
-app.use(bodyParser());
-app.use(router.routes());
-app.use(router.allowedMethods());
-
-
-
-
+app.use(cors())
+// requisition handling
+app.use(bodyParser())
+// routing koa
+app.use(router.routes())
+app.use(router.allowedMethods())

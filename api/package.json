@@ -1,82 +1,39 @@
 {
-  
   "name": "api",
-  
   "version": "0.0.0",
-  
   "description": "",
-  
-  "main": "serve.js",
-  
+  "main": "server.js",
   "type": "module",
-  "script": {
-    "start":  "node -r dotenv-safe/config serve.js"
+  "scripts": {
+    "server": "node -r dotenv-safe/config server.js"
   },
   "prisma": {
-  
-    
-  "seed": "node prisma/seed.js"
-  
+    "seed": "node prisma/seed.js"
   },
-  
   "repository": {
-  
-    
-  "type": "git",
-  
-    
-  "url": "git+https://github.com/MarioLucas0/Na-Trave.git"
-  
+    "type": "git",
+    "url": "git+https://github.com/Ar3secchim/challenge-fullStack-CupBet.git"
   },
-  
-  "author": "Mario Lucas",
-  
-  "license": "ISC",
-  
+  "author": "Renara Secchim",
+  "license": "MIT",
   "bugs": {
-  
-    
-  "url": "https://github.com/MarioLucas0/Na-Trave/issues"
-  
+    "url": "https://github.com/Ar3secchim/challenge-fullStack-CupBet/issues"
   },
-  
-  "homepage": "https://github.com/MarioLucas0/Na-Trave#readme",
-  
+  "homepage": "https://github.com/Ar3secchim/challenge-fullStack-CupBet#readme",
   "dependencies": {
-  
-    
-  "@koa/cors": "^3.4.1",
-  
-    
-  "@koa/router": "^12.0.0",
-  
-    
-  "@prisma/client": "^4.4.0",
-  
-    
-  "bcrypt": "^5.1.0",
-  
-    
-  "date-fns": "^2.29.3",
-  
-    
-  "dotenv-safe": "^8.2.0",
-  
-    
-  "jsonwebtoken": "^8.5.1",
-  
-    
-  "koa": "^2.13.4",
-  
-    
-  "koa-bodyparser": "^4.3.0"
-  
+    "@koa/cors": "^3.4.2",
+    "@koa/router": "^12.0.0",
+    "@prisma/client": "^4.4.0",
+    "bcrypt": "^5.1.0",
+    "date-fns": "^2.29.3",
+    "dotenv-safe": "^8.2.0",
+    "j": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0"
   },
-  
   "devDependencies": {
-  
-    
-  "prisma": "^4.4.0"
-  
+    "@types/jsonwebtoken": "^8.5.9",
+    "prisma": "^4.4.0"
   }
 }

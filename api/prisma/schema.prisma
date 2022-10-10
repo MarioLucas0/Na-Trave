@@ -1,61 +1,47 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
   previewFeatures = ["referentialIntegrity"]
 }
 
-
 datasource db {
-  provider = "mysql"
-  url  = env("DATABASE_URL")
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
   referentialIntegrity = "prisma"
 }
 
 model User {
-  id String @id @default(cuid())
-  name String
-  email String @unique
-  username String @unique
+  id       String   @id @default(cuid())
+  name     String
+  email    String   @unique
+  username String   @unique
   password String
-  
-  createdAt DateTime @default(now())
-  updatedAt DateTime  @updatedAt
-
-  hunches Hunch[]
-
+  createAt DateTime @default(now())
+  updateAt DateTime @updatedAt
+  hunches  Hunch[]
 }
 
-model  Game {
-  id String @id @default(cuid())
+model Game {
+  id       String   @id @default(cuid())
   homeTeam String
   awayTeam String
   gameTime DateTime
+  createAt DateTime @default(now())
+  updateAt DateTime @updatedAt
+  hunches  Hunch[]
 
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime  @updatedAt
-
-   hunches Hunch[]
-
-   @@unique([homeTeam,awayTeam,gameTime])
+  @@unique([homeTeam, awayTeam, gameTime])
 }
 
 model Hunch {
+  id            String   @id @default(cuid())
+  userId        String
+  gameId        String
+  user          User     @relation(fields: [userId], references: [id])
+  game          Game     @relation(fields: [gameId], references: [id])
+  homeTeamScore Int
+  awayTeamScore Int
+  createAt      DateTime @default(now())
+  updateAt      DateTime @updatedAt
 
-   id String @id @default(cuid())
-   homeTeamScore Int
-   awayTeamScore Int
-   userId String 
-   gameId String
-   
-    user  User    @relation(fields: [userId], references: [id]) 
-    game  Game @relation(fields: [gameId], references: [id])
-         
-  
-  createdAt DateTime @default(now())
-  updatedAt DateTime  @updatedAt
-
-  @@unique([userId,gameId])
+  @@unique([userId, gameId])
 }
